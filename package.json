@@ -1,0 +1,11 @@
+{
+  "name": "letsmakecsv",
+  "version": "0.0.1",
+  "description": "Let's make csv!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "david",
+  "license": "ISC"
+}
