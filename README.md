@@ -14,6 +14,7 @@ This module will make a CSV one row at a time. It will also modify the CSV heade
 ###### Use a github token, because this module is probably private
 
 # example
+```javascript
 var lmcsv = require("lets-make-csvs")
 
 
@@ -28,6 +29,7 @@ csv.writeRow({h1: "bar", h2:"boot"}, function(err){
     })
   })
 })
+```
 
 ### CSV result:
 Open the result in your Excel or Google Sheets and you should see something like this:
