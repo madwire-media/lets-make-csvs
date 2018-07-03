@@ -36,9 +36,8 @@ Open the result in your Excel or Google Sheets and you should see something like
 
 
 | A   | B    | C      | D   | E    | F   |
-|--- |---- |------ |--- |---- |--- |---
+|---  |---   |---     |---  |---   |---  |---
 | h1  | h2   | h3     | h4  | h5   |     |
 | bar | boot |        |     |      |     |
 |     | bar  | bzzoot | baz |      |     |
 |     |      |        |     | what |     |
-|     |      |        |     |      |     |
