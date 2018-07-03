@@ -6,7 +6,7 @@ function lmcsv(filename){
   this.columns = []
   this.filename = filename
   fs.writeFileSync(filename, "placeholder\n");
-  console.log("made file", filename)
+
 }
 
 lmcsv.prototype.writeRow = function(data, cb){
@@ -41,9 +41,7 @@ lmcsv.prototype.writeRow = function(data, cb){
     header = header.slice(0, -1)
     row = row.slice(0,-1)
 
-    console.log(header)
-    console.log(row)
-    console.log("WRITING ", that.filename)
+
 
     fileman.removeFirstLine(that.filename, function(err){
       if(err) return cb(err)
@@ -53,7 +51,7 @@ lmcsv.prototype.writeRow = function(data, cb){
 
         fs.appendFile(that.filename,row, function (err) {
           if (err) return cb(err);
-          console.log('Saved!');
+          
           return cb(null)
         });
 
