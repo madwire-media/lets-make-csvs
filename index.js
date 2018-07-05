@@ -10,29 +10,24 @@ function lmcsv(filename) {
   fs.writeFileSync(filename, "\n");
 }
 
+lmcsv.prototype.writeRowArray = writeRowArray
 
-// lmcsv.prototype.writeRowArray = writeRowArray
+function writeRowArray(data, cb){
+  var that = this
+  lmcsv.prototype.writeRow(data[0], function(err){
+    if(err) return cb(err)
+    return cb(null)
+  })
+  async.eachSeries(data, function eachRow(row, cb){
+    console.log(this.columns)
 
-
-
-// function writeRowArray(data, cb){
-//   var that = this
-//   async.eachSeries(data, function eachRow(row, cb){
-//     console.log(row)
-//     return writeRow(row, function(err){
-//       if(err) return cb(err)
-//       return cb(null)
-//     })
-//   }, function endEachRow(err){
-//     if(err) return cb(err)
-//     return cb(null)
-//   })
-// }
-
-
+  }.bind(this), function endEachRow(err){
+    if(err) return cb(err)
+    return cb(null)
+  })
+}
 
 lmcsv.prototype.writeRow = writeRow
-
 
 function writeRow(data, cb) {
   var that = this
@@ -41,8 +36,9 @@ function writeRow(data, cb) {
   let header = ""
   let row = ""
 
-  Object.keys(data).forEach(function(col_key, i) {
+  console.log('-->',this.columns)
 
+  Object.keys(data).forEach(function(col_key, i) {
     if (!this.columns.includes(col_key)) this.columns.push(col_key)
   }.bind(this))
 
