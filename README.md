@@ -19,7 +19,7 @@ var lmcsv = require("lets-make-csvs")
 
 
 var csv = new lmcsv("test.csv")
-csv.writeRow({h1: "bar", h2:"boot"}, function(err){
+csv.writeRow({name: "David Johnson", age: 27, address:"113 Main Street"}, function(err){
   if(err) throw err
   csv.writeRow({h2: "bar", h3:"bzzoot", h4:"baz"}, function(err){
     if(err) throw err
