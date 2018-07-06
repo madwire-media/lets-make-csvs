@@ -59,16 +59,16 @@ let myobj = [{
   "occupation":"Engineer"
 }]
 //
-// async.eachSeries(myobj, function eachRow(row, cb) {
-//   csv.writeRow(row, function(err) {
-//     if (err) return cb(err)
-//     return cb(null)
-//   })
-// }, function endEachRow(err) {
-//   if (err) throw err
-//   console.log("done")
-// })
-
-csv.writeRowArray(myobj, function(err){
-  console.log('done')
+async.eachSeries(myobj, function eachRow(row, cb) {
+  csv.writeRow(row, function(err) {
+    if (err) return cb(err)
+    return cb(null)
+  })
+}, function endEachRow(err) {
+  if (err) throw err
+  console.log("done")
 })
+
+// csv.writeRowArray(myobj, function(err){
+//   console.log('done')
+// })
