@@ -1,6 +1,6 @@
 {
   "name": "lets-make-csvs",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Let's make csv!",
   "main": "index.js",
   "scripts": {
