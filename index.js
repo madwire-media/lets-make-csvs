@@ -52,6 +52,7 @@ function writeRow(data, cb) {
     if (typeof data[column] === "string") {
       // Replace quotes in string
       var s = data[column].replace(/"/g, '""')
+      if(s === "") s = " "
       // add row data
       row += `"${s}",`
     } else if(typeof data[column] === "number"){
