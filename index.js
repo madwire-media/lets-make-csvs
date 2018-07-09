@@ -1,6 +1,8 @@
-const replaceFirstLineOfFile = require("./lib/replaceFirstLineOfFile.js")
+const replaceFirstLineOfFile = require("file-firstline-replace")
 const fs = require('fs')
 const async = require('async')
+
+console.log(replaceFirstLineOfFile)
 
 module.exports = lmcsv
 
