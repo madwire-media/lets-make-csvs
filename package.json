@@ -9,6 +9,7 @@
   "author": "david",
   "license": "ISC",
   "dependencies": {
-    "async": "^2.6.1"
+    "async": "^2.6.1",
+    "tmp": "0.0.33"
   }
 }
