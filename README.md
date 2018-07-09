@@ -9,14 +9,14 @@ This module will make a CSV one row at a time. It will also modify the CSV heade
 
 # Usage
 
-`npm install https://github.com/madwire-media/lets-make-csvs.git`
+`npm install lets-make-csvs`
 
 ###### Use a github token, because this module is probably private
 
 # example
 ```javascript
 const async = require('async')
-let lmcsv = require("./index.js")
+let lmcsv = require("lets-make-csvs")
 
 let csv = new lmcsv("test.csv")
 
@@ -114,4 +114,4 @@ Open the result in your Excel or Google Sheets and you should see something like
 
 
 ### Todo:
-- https://www.npmjs.com/package/tmp
+- Array method
