@@ -1,6 +1,6 @@
 {
   "name": "lets-make-csvs",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Let's make csv!",
   "main": "index.js",
   "scripts": {
@@ -13,9 +13,7 @@
     "file-firstline-replace": "git+https://github.com/madwire-media/file-firstline-replace.git",
     "tmp": "0.0.33"
   },
-
   "engines": {
     "node": ">=8.5.0"
   }
-
 }
