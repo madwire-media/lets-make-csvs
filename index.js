@@ -38,7 +38,7 @@ function writeRow(data, cb) {
   let header = ""
   let row = ""
 
-  console.log('-->',this.columns)
+//  console.log('-->',this.columns)
 
   Object.keys(data).forEach(function(col_key, i) {
     if (!this.columns.includes(col_key)) this.columns.push(col_key)
