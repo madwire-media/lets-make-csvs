@@ -29,6 +29,8 @@ function writeRowArray(data, cb){
 
 lmcsv.prototype.writeRow = writeRow
 
+var oldheader = ""
+
 function writeRow(data, cb) {
   var that = this
 
@@ -74,6 +76,11 @@ function writeRow(data, cb) {
 
   fs.appendFile(that.filename,row,function(err){
     if(err) return cb(err)
+    if(oldheader === header) return cb(null)
+    oldheader = header
+
+
+    // TODO: Warning - multiple async writes at the same time here could create a problem. Implement header lock.
     replaceFirstLineOfFile(that.filename, header, function(err) {
       if (err) return cb(err)
       return cb(null)
