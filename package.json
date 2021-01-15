@@ -11,7 +11,7 @@
   "dependencies": {
     "async": "^2.6.1",
     "file-firstline-replace": "git+https://github.com/madwire-media/file-firstline-replace.git",
-    "tmp": "0.0.33"
+    "tmp": "0.2.1"
   },
   "engines": {
     "node": ">=8.5.0"
